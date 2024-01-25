@@ -5,26 +5,22 @@ import (
 	"github.com/cloudwego/kitex/server"
 )
 
-type clientSuiteFn func() []client.Option
+type clientOptions []client.Option
 
-type serverSuiteFn func() []server.Option
+type serverOptions []server.Option
 
-func (f clientSuiteFn) Options() []client.Option {
-	return f()
+func (opts clientOptions) Options() []client.Option {
+	return opts
 }
 
-func (f serverSuiteFn) Options() []server.Option {
-	return f()
+func (opts serverOptions) Options() []server.Option {
+	return opts
 }
 
 func ClientSuite(opts ...client.Option) client.Suite {
-	return clientSuiteFn(func() []client.Option {
-		return opts
-	})
+	return clientOptions(opts)
 }
 
 func ServerSuite(opts ...server.Option) server.Suite {
-	return serverSuiteFn(func() []server.Option {
-		return opts
-	})
+	return serverOptions(opts)
 }
