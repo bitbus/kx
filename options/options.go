@@ -1,3 +1,6 @@
+//go:build go1.19
+// +build go1.19
+
 package options
 
 import (
@@ -5,22 +8,16 @@ import (
 	"github.com/cloudwego/kitex/server"
 )
 
-type clientOptions []client.Option
+type options[T client.Option | server.Option] []T
 
-type serverOptions []server.Option
-
-func (opts clientOptions) Options() []client.Option {
-	return opts
-}
-
-func (opts serverOptions) Options() []server.Option {
+func (opts options[T]) Options() []T {
 	return opts
 }
 
 func ClientSuite(opts ...client.Option) client.Suite {
-	return clientOptions(opts)
+	return options[client.Option](opts)
 }
 
 func ServerSuite(opts ...server.Option) server.Suite {
-	return serverOptions(opts)
+	return options[server.Option](opts)
 }
