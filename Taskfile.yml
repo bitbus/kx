@@ -1,0 +1,22 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: test
+
+  test:
+    desc: "test app"
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - go test -v -race ./...
+  
+  gofmt:
+    desc: "go fmt project"
+    dir: '{{.USER_WORKING_DIR}}'
+    aliases:
+      - "fmt"
+    cmds:
+      - go fmt ./...

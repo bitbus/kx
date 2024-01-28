@@ -1,0 +1,35 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  TARGET: kx
+  DEST: bin
+  BUILD_TAGS: sonic
+
+dotenv: ['.env']
+
+tasks:
+  default:
+    cmds:
+      - task: gofmt
+
+  build:
+    desc: "build app"
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - go build -tags '{{.BUILD_TAGS}}' -o {{.DEST}}/{{.TARGET}} .
+
+  test:
+    desc: "test app"
+    dir: '{{.USER_WORKING_DIR}}'
+    cmds:
+      - go test -v -race ./...
+  
+  gofmt:
+    desc: "go fmt project"
+    dir: '{{.USER_WORKING_DIR}}'
+    aliases:
+      - "fmt"
+    cmds:
+      - go fmt ./...
