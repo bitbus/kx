@@ -6,6 +6,7 @@ package cmd
 
 import (
 	"github.com/bitbus/kx/tool/kx/cmd/root"
+	"github.com/bitbus/kx/xlog"
 	"github.com/spf13/cobra"
 )
 
@@ -20,5 +21,5 @@ func init() {
 }
 
 func configRun(_cmd *cobra.Command, _args []string) {
-	// TODO
+	xlog.Warn("not implemented")
 }
