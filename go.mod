@@ -4,7 +4,7 @@ go 1.21
 
 require (
 	github.com/bytedance/sonic v1.11.3
-	github.com/cloudwego/kitex v0.9.0
+	github.com/cloudwego/kitex v0.9.1
 )
 
 require (
