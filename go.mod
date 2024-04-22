@@ -3,20 +3,23 @@ module github.com/bitbus/kx
 go 1.21
 
 require (
-	github.com/bytedance/sonic v1.11.3
+	github.com/bytedance/sonic v1.11.5
 	github.com/cloudwego/kitex v0.9.1
 )
 
 require (
 	github.com/apache/thrift v0.13.0 // indirect
 	github.com/bytedance/gopkg v0.0.0-20230728082804-614d0af6619b // indirect
+	github.com/bytedance/sonic/loader v0.1.0 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d // indirect
 	github.com/chenzhuoyu/iasm v0.9.1 // indirect
 	github.com/choleraehyq/pid v0.0.18 // indirect
+	github.com/cloudwego/base64x v0.1.3 // indirect
 	github.com/cloudwego/configmanager v0.2.0 // indirect
 	github.com/cloudwego/dynamicgo v0.2.0 // indirect
 	github.com/cloudwego/fastpb v0.0.4 // indirect
 	github.com/cloudwego/frugal v0.1.14 // indirect
+	github.com/cloudwego/iasm v0.2.0 // indirect
 	github.com/cloudwego/localsession v0.0.2 // indirect
 	github.com/cloudwego/netpoll v0.6.0 // indirect
 	github.com/cloudwego/thriftgo v0.3.6 // indirect
