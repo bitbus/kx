@@ -3,7 +3,7 @@ module github.com/bitbus/kx
 go 1.21
 
 require (
-	github.com/bytedance/sonic v1.11.8
+	github.com/bytedance/sonic v1.11.9
 	github.com/cloudwego/kitex v0.10.1
 )
 
