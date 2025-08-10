@@ -3,13 +3,13 @@ module github.com/bitbus/kx
 go 1.21
 
 require (
-	github.com/bytedance/sonic v1.13.3
+	github.com/bytedance/sonic v1.14.0
 	github.com/cloudwego/kitex v0.13.1
 )
 
 require (
 	github.com/bytedance/gopkg v0.1.2 // indirect
-	github.com/bytedance/sonic/loader v0.2.4 // indirect
+	github.com/bytedance/sonic/loader v0.3.0 // indirect
 	github.com/cloudwego/base64x v0.1.5 // indirect
 	github.com/cloudwego/configmanager v0.2.3 // indirect
 	github.com/cloudwego/dynamicgo v0.6.2 // indirect
